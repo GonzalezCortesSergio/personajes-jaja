@@ -1,0 +1,17 @@
+<div class="container w-50 mx-auto mt-5">
+    <div class="row">
+        @for (personaje of listadoPersonajes; track $index) {
+
+            <div class="col-5">
+                <div class="card">
+                    
+                    <img class="card-img-top" [src]="personaje.photoUrl" [alt]="personaje.nombre" />
+                
+                    <div class="card-body">
+                        <h6 class="card-title text-center">{{personaje.nombre}}</h6>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
