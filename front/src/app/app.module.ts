@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListadoPersonajesComponent } from './components/listado-personajes/listado-personajes.component';
 import { FormularioPersonajeComponent } from './components/formulario-personaje/formulario-personaje.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(),

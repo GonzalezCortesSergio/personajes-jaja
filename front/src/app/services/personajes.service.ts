@@ -15,4 +15,8 @@ export class PersonajesService {
 
     return this.http.get(this.API_URL) as Observable<Personaje[]>;
   }
+
+  savePersonaje(personaje: Personaje): Observable<Personaje> {
+    return this.http.post(this.API_URL, personaje) as Observable<Personaje>;
+  }
 }

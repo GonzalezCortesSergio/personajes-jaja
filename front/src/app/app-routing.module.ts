@@ -5,7 +5,7 @@ import { FormularioPersonajeComponent } from './components/formulario-personaje/
 
 const routes: Routes = [
   {path: 'personajes', component: ListadoPersonajesComponent},
-  {path: 'agregar', component: FormularioPersonajeComponent},
+  {path: 'formulario', component: FormularioPersonajeComponent},
   {path: '', redirectTo: '/personajes', pathMatch: 'full'}
 ];
 
