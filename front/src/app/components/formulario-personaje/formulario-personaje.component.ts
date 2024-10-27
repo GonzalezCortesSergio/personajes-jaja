@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Personaje } from '../../interfaces/personaje.interface';
 import { PersonajesService } from '../../services/personajes.service';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-formulario-personaje',
@@ -10,17 +9,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FormularioPersonajeComponent {
 
-  personaje: Personaje = 
-  {
-    id: 0,
+  personaje = {
     nombre: "",
     photoUrl: ""
-  }
+  };
 
-  constructor(private http: HttpClient){}
+  constructor(private service: PersonajesService){}
 
   savePersonaje(): void {
 
-    this.http.post("http://localhost:9000/api/personaje",this.personaje);
+    this.service.savePersonaje(<Personaje>this.personaje);
   }
  }

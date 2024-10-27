@@ -2,11 +2,11 @@
 <form class="form w-50 mx-auto" novalidate>
     <div class="mb-3">
         <label for="nombre" class="form-label">Nombre del personaje</label>
-        <input [(ngModel)]="personaje.nombre" type="text" class="form-control" id="nombre" name="nombre" />
+        <input [(ngModel)]="personaje!.nombre" type="text" class="form-control" id="nombre" name="nombre" />
     </div>
     <div class="mb-3">
         <label for="photoUrl" class="form-label">URL de una foto suya jajosa</label>
-        <input [(ngModel)]="personaje.photoUrl" type="text" class="form-control" id="photoUrl" name="photoUrl" />
+        <input [(ngModel)]="personaje!.photoUrl" type="text" class="form-control" id="photoUrl" name="photoUrl" />
     </div>
     <div class="text-center">
         <button (click)="savePersonaje()" class="btn btn-dark">Agregar</button>

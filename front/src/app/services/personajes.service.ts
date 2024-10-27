@@ -17,6 +17,10 @@ export class PersonajesService {
   }
 
   savePersonaje(personaje: Personaje): Observable<Personaje> {
-    return this.http.post(this.API_URL, personaje) as Observable<Personaje>;
+    
+    const headers = { 'content-type': 'application/json' };
+    const body = JSON.stringify(personaje);
+    console.log(body);
+    return this.http.post(this.API_URL, body, {'headers': headers}) as Observable<Personaje>;
   }
 }
