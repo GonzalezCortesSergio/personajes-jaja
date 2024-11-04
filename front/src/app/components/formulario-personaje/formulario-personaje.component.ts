@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Personaje } from '../../interfaces/personaje.interface';
 import { PersonajesService } from '../../services/personajes.service';
+import { PersonajeDto } from '../../models/personaje.dto';
 
 @Component({
   selector: 'app-formulario-personaje',
@@ -9,15 +9,12 @@ import { PersonajesService } from '../../services/personajes.service';
 })
 export class FormularioPersonajeComponent {
 
-  personaje = {
-    nombre: "",
-    photoUrl: ""
-  };
+  personaje = new PersonajeDto("", "")
 
   constructor(private service: PersonajesService){}
 
   savePersonaje(): void {
 
-    this.service.savePersonaje(<Personaje>this.personaje);
+    this.service.savePersonaje(this.personaje);
   }
  }
